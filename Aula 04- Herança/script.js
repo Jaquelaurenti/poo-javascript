@@ -1,14 +1,27 @@
+"use strict";
+
 class Animal {
-  constructor(especie) {
-    this.especie = especie
+  #pais
+  constructor(especie, pais) {
+    this.especie = especie,
+    this.#pais = pais
   }
+  /*get pais () {
+    return this.#pais
+  }
+  set pais(i) {
+    console.log("estou no set de pais")
+    this.#pais = i
+  }*/
+ 
+
 }
 
 // Extendendo a classe pessoa de animal
 
 class Pessoa extends Animal {  
-  constructor( nome, idade, especie = "homo sapiens sapeiens",) {
-    super(especie)
+  constructor( nome, idade, especie = "homo sapiens sapeiens", pais) {
+    super(especie, pais)
     this.nome = nome,
     this.idade = idade
   }
@@ -31,11 +44,13 @@ class Cidadao extends Pessoa  {
     this.rg = rg
   }
 }
+
  
 
- const joao = new Pessoa('Joao', 22);
+ const joao = new Pessoa("Joao", 22, "", "Brasil")
+ joao.pais = "Russia"
+ const marlon = new Pessoa("Marlon", 22, "", "EUA")
  console.log(joao)
+ console.log(marlon)
 
- const jaque = new Cidadao('Carlos', 24, '00000', '1111');
-
- console.log(jaque)
+ 
