@@ -54,7 +54,7 @@ onde retorna os dados do cnpj
 Utilize o conceito de Polimorfismo para execução da solicitação acima
 
 
-Crie uma Classe Lançamentos 
+Crie uma Objeto Lançamentos 
 e para cada operação de saque ou depósito
 Insira os seguintes registros nessa classe:
   - Nome do Cliente
